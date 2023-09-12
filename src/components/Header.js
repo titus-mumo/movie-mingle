@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import Logo from "../assets/logo.png";
+import Logo from "../assets/lan-deng-eVqU1HTZL8E-unsplash.jpg";
 
 export const Header = () => {
   const [hidden, setHidden] = useState(true);
