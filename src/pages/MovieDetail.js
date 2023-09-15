@@ -6,6 +6,7 @@ export const MovieDetail = () => {
     const [loading, isLoading] = useState(false)
     const params = useParams();
     const [movie, setMovie] = useState({})
+    const format = Intl.NumberFormat('en-US');
 
     useEffect(() => {
         isLoading(true)
@@ -57,12 +58,12 @@ export const MovieDetail = () => {
 
                             <p className="my-4">
                                 <span className="mr-2 font-bold">Budget:</span>
-                                <span>{movie.budget}</span>
+                                <span>${format.format(movie.budget)}</span>
                             </p>
 
                             <p className="my-4">
                                 <span className="mr-2 font-bold">Revenue:</span>
-                                <span>{movie.revenue}</span>
+                                <span>${format.format(movie.revenue)}</span>
                             </p>
 
                             <p className="my-4">
@@ -72,7 +73,7 @@ export const MovieDetail = () => {
 
                             <p className="my-4">
                                 <span className="mr-2 font-bold">IMDB Link:</span>
-                                <a href={`https://www.imdb.com/title/${movie.imdb_id}`} target="_blank" rel="noreferrer">{movie.imdb_id}</a>
+                                <a href={`https://www.imdb.com/title/${movie.imdb_id}`} target="_blank" rel="noreferrer"><u>{movie.imdb_id}</u></a>
                             </p>
                       </div>
                   </>
