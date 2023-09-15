@@ -25,7 +25,7 @@ export const MovieDetail = () => {
   return (
       <main>
           <section className='flex justify-around flex-wrap py-5'>
-              {loading ? <p className='dark:text-white text-lg'>Loading...</p> :
+              {loading ? <p className='dark:text-white text-lg'>Fetching details...</p> :
                   <>
                         <div className='max-w-sm'>
                             <img className="rounded" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
